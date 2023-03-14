@@ -76,6 +76,17 @@ public:
 		Point temp((this->x + pt.x) , (this->y + pt.y), tempz);
 		return temp;*/
 	}
+	void* operator new(size_t size)
+	{
+		std::cout << "\nOverloading new operator with size: " << size << std::endl;
+		void* p = ::operator new(size);
+		return p;
+	}
+	void operator delete(void* p)
+	{
+		std::cout << "\nOverloading delete operator " << std::endl;
+		free(p);
+	}
 
 	void PrintX() {
 		std::cout << "\nX:" << this->x;
@@ -137,6 +148,13 @@ int main()
 	else
 		std::cout << "\nP4 & P3 are equal";
 
+	Point* P5 = new Point(1, 1, 1);
+
+	std::cout << *P5;
+
+	delete P5;
+	
+	//std::cout << *P5;
 
 	std::cout << "\n\n";
 	return 0;
