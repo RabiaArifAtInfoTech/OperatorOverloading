@@ -21,12 +21,13 @@ public:
         imaginary = z.imaginary;
     };
     //....1....
+    // operator * (dereference)
     ComplexNumber& operator*() 
     {
       //  std::cout << "\nin \"*\" operator ";
         return *this;
     }
-       // ...2...
+    // ...2...
     //operator +
     ComplexNumber& operator+(ComplexNumber CN)
     {
@@ -38,13 +39,11 @@ public:
     {
         return *ComplexNumber(this->real - CN.real, this->imaginary - CN.imaginary);
     }
-
     //...4...
     //operator x NUM
     ComplexNumber& operator*(float num) {
         return *ComplexNumber( (num * this->real), (num* this->imaginary));
     }
-
     //...5...
     //operator x ComplexNumber
     ComplexNumber& operator*(ComplexNumber cn) {
@@ -53,7 +52,6 @@ public:
         ImaginaryPart = (this->real * cn.imaginary) + (this->imaginary * cn.real);
         return *ComplexNumber( RealPart, ImaginaryPart );
     }
-
     //...6...
     // operator "/" ComplexNumber
     ComplexNumber& operator/(ComplexNumber cn) {
@@ -65,8 +63,8 @@ public:
         ImaginaryPart = ((this->imaginary * cn.real) - (this->real * cn.imaginary)) / dividend;
         return *ComplexNumber(RealPart, ImaginaryPart);
     }
-
     //...7...
+    //operator=
     ComplexNumber& operator=(ComplexNumber cn)
     {
        // std::cout << "\nin \"=\" operator ";
@@ -76,6 +74,7 @@ public:
         return *this;
     }
     //...8...
+    //operator==
     bool operator==(ComplexNumber cn)
     {
         if (this->real == cn.real && this->imaginary == cn.imaginary)
@@ -84,6 +83,7 @@ public:
             return false;
     }
     //...9...
+    //operator!=
     bool operator!=(ComplexNumber cn)
     {
         if (this->real == cn.real && this->imaginary == cn.imaginary)
@@ -125,6 +125,7 @@ public:
 };
 
 //...10...
+//operator<<
 std::ostream& operator<<(std::ostream& os,  ComplexNumber& CN)
 {
     if (CN.getImaginary() > 0) {
@@ -141,6 +142,7 @@ std::ostream& operator<<(std::ostream& os,  ComplexNumber& CN)
 }
 
 //...11...
+//operator>>
 std::istream& operator>>(std::istream& is, ComplexNumber& CN)
 {
 	// read obj from stream
@@ -153,4 +155,3 @@ std::istream& operator>>(std::istream& is, ComplexNumber& CN)
 }
 
 #endif // !ComplexNumbers
-
