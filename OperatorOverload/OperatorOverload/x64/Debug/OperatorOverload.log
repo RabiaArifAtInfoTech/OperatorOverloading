@@ -1,9 +1,2 @@
-﻿  Source.cpp
-  Source1.cpp
-E:\OneDrive - Infotech (Private) Limited\GitFolders\OperatorOverloading\OperatorOverload\OperatorOverload\Source1.cpp(73,2): error C2664: 'void PrintPoint(Point)': cannot convert argument 1 from 'int' to 'Point'
-E:\OneDrive - Infotech (Private) Limited\GitFolders\OperatorOverloading\OperatorOverload\OperatorOverload\Source1.cpp(73,13): message : Constructor for struct 'Point' is declared 'explicit'
-E:\OneDrive - Infotech (Private) Limited\GitFolders\OperatorOverloading\OperatorOverload\OperatorOverload\Source1.cpp(47,6): message : see declaration of 'PrintPoint'
-E:\OneDrive - Infotech (Private) Limited\GitFolders\OperatorOverloading\OperatorOverload\OperatorOverload\Source1.cpp(73,2): message : while trying to match the argument list '(int)'
-E:\OneDrive - Infotech (Private) Limited\GitFolders\OperatorOverloading\OperatorOverload\OperatorOverload\Source1.cpp(76,11): error C2440: 'initializing': cannot convert from 'int' to 'Point'
-E:\OneDrive - Infotech (Private) Limited\GitFolders\OperatorOverloading\OperatorOverload\OperatorOverload\Source1.cpp(76,11): message : Constructor for struct 'Point' is declared 'explicit'
-  Generating Code...
+﻿  ComplexNumbers.cpp
+  OperatorOverload.vcxproj -> E:\OneDrive - Infotech (Private) Limited\GitFolders\OperatorOverloading\OperatorOverload\x64\Debug\OperatorOverload.exe
